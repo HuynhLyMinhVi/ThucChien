@@ -1,0 +1,142 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  /* height: 100px;  */
+  background: linear-gradient(to right, #4daf54, #3d8880);
+}
+
+.card {
+  margin: 120px auto;
+  width: 320px;
+  height: 400px;
+  background: #272d40;
+  border-radius: 15px;
+  padding: 20px;
+  position: relative;
+  font-family: Poppins;
+  color: #fff;
+}
+
+.card:hover .card__img{
+    transform: translateY(-90px) rotate(-20deg);
+}
+
+.card__yeuThich,
+.card__gioHang {
+  color: #fff;
+  font-size: 25px;
+  cursor: pointer;
+  position: absolute;
+  left: 20px;
+  top: 10px;
+  z-index: 2;
+}
+
+.card__gioHang {
+  left: unset;
+  right: 20px;
+}
+
+.card__img{
+    width:90%;
+    transition: 0.5s;
+}
+
+.card__img img {
+  width: 100%;
+  object-fit: cover;
+}
+
+.card__Nike,
+.card__soTien {
+  font-size: 22px;
+  font-weight: bold;
+  text-align: center;
+  transition:0.5s;
+}
+
+.card:hover .card__Nike{
+    transform: translate(-50px ,-70px);
+}
+.card:hover .card__soTien{
+    transform: translate(-117px ,-72px);
+}
+
+.card__Nike {
+  color: #4daf54;
+}
+
+.card__size,
+.card__color {
+  display: flex;
+  align-items: center;
+  margin-bottom: 5px;
+  transition: 0.5s;
+}
+
+.card__size span {
+  padding: 1px 10px;
+  background: #dadada;
+  margin: 6px 3px;
+  border-radius: 5px;
+  cursor: pointer;
+  color: #272d40;
+}
+.card__color span {
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  margin: 0 9px;
+  cursor: pointer;
+}
+
+.card__color--green {
+  background: green;
+}
+.card__color--red {
+  background: red;
+}
+.card__color--black {
+  background: black;
+}
+.card__action button{
+    background:#4daf54;
+    color: #fff;
+    border-radius: 10px;
+    border: none;
+    cursor: pointer;
+    padding: 10px 20px;
+    font-weight: bold;
+    margin-right: 10px;
+    transition: 0.25s;
+}
+
+.card__size{
+    margin-top:150px;
+}
+.card__size, .card__color, .card__action{
+    visibility: hidden;
+    opacity: 0;
+    transition-delay: 0.2s;
+}
+
+.card:hover .card__size, 
+.card:hover .card__color,
+.card:hover .card__action{
+    visibility:visible;
+    opacity: 1;
+}
+
+.card:hover .card__size{
+    margin-top: -25px;
+}
+
+.card__action button:hover{
+    transform: scale(0.9);
+}
